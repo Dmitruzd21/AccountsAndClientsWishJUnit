@@ -54,10 +54,6 @@ public class Client implements MoneyTarget {
         return false;
     }
 
-    @Override
-    public String toString() {
-        return "Имя клиента: " + name + ". Может иметь максимально: " + maxAccounts + " счетов, в настоящее время имеет " + accounts.length + " счета в банке";
-    }
 
     @Override
     public boolean accept(int money) {
@@ -67,5 +63,10 @@ public class Client implements MoneyTarget {
             }
         }
         return false;
+    }
+
+    @Override
+    public String toString() {
+        return "Имя клиента: " + name + ". Может иметь максимально: " + maxAccounts + " счетов, в настоящее время имеет " + accounts.length + " счета в банке";
     }
 }
